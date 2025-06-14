@@ -43,7 +43,7 @@ export default function BrandsSection() {
           setIsInView(true);
         }
       },
-      { threshold: 0.5 } // Trigger when 50% of the section is in view
+      { threshold: 0.5 } 
     );
 
     if (section) {
@@ -52,7 +52,7 @@ export default function BrandsSection() {
 
     return () => {
       if (section) {
-        observer.unobserve(section); // Use the locally stored ref value
+        observer.unobserve(section); 
       }
     };
   }, []);
@@ -61,7 +61,7 @@ export default function BrandsSection() {
     <section ref={sectionRef} className="container my-20 lg:my-36 text-center">
       {/* Heading Animation */}
       <motion.h2
-        className="uppercase text-xl text-slate-700 mx-10 lg:mx-0"
+        className="uppercase text-2xl text-slate-800 mx-10 lg:mx-0"
         initial="hidden"
         animate={isInView ? 'visible' : 'hidden'}
         variants={childVariants}
