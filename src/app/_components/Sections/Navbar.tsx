@@ -84,7 +84,7 @@ export default function Navbar() {
 
       {/* Desktop Navigation Links */}
       <div className="hidden lg:flex w-full justify-center">
-        <ul className="flex gap-24 text-gray-800">
+        <ul className="flex gap-24 ">
           {navLinks.map((link, index) => (
             <motion.li
               key={index}
