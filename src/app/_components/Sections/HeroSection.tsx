@@ -63,7 +63,7 @@ export default function HeroSection() {
 
   return (
     <section className="container mt-10">
-      <div className="w-full relative text-slate-900 select-none">
+      <div className="w-full relative text-slate-800 select-none">
         {/* Header Section */}
         <div className="flex items-center w-40 gap-6 ml-4 lg:ml-10">
           <span className="uppercase font-semibold text-2xl">Digital</span>
@@ -110,7 +110,7 @@ export default function HeroSection() {
 
             {/* Fullscreen Modal */}
             {isFullscreen && (
-              <div className="fixed inset-0 bg-black z-50">
+              <div className="fixed inset-0 bg-gray-950 z-50">
                 <button
                   onClick={handleToggleFullscreen}
                   className="absolute top-4 right-4 z-10 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full"
