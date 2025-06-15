@@ -78,7 +78,7 @@ export default function FeaturedSection() {
             className="text-white text-5xl font-medium mt-6 lg:mt-0"
           >
             {`${selectedIndex + 1}/`}
-            <span className="text-5xl text-gray-600">4</span>
+            <span className="text-5xl text-gray-500">4</span>
           </motion.p>
         </div>
 
