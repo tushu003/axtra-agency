@@ -92,7 +92,7 @@ export default function CommentsSection() {
           {/* Carousel Section */}
           <div className="md:w-[580px] mx-auto">
             <div className="text-center mx-auto">
-              <DoubleQuotationUpIcon className="w-14 mx-auto mb-7 text-slate-800" />
+              <DoubleQuotationUpIcon className="w-14 mx-auto mb-7 text-slate-700" />
             </div>
 
             <div className="relative">
@@ -103,13 +103,13 @@ export default function CommentsSection() {
                       key={index}
                       className="flex-shrink-0 w-full text-center px-4"
                     >
-                      <p className="text-2xl leading-9 italic text-gray-800">
+                      <p className="text-2xl leading-9 italic text-gray-700">
                         {comment.text}
                       </p>
-                      <h2 className="text-2xl font-medium uppercase mt-7 text-slate-800">
+                      <h2 className="text-2xl font-medium uppercase mt-7 text-slate-700">
                         {comment.author}
                       </h2>
-                      <p className="uppercase text-xs mt-2 text-slate-500">
+                      <p className="uppercase text-xs mt-2 text-slate-400">
                         {comment.position}
                       </p>
                     </div>
@@ -120,7 +120,7 @@ export default function CommentsSection() {
               <div className="flex justify-center gap-10 mt-10 md:w-[580px] w-full mx-auto z-10">
                 <button
                   onClick={scrollPrev}
-                  className="bg-white rounded-full hover:bg-gray-950 transition border border-slate-800 text-slate-800 hover:text-slate-200 flex items-center justify-center w-14 h-14"
+                  className="bg-white rounded-full hover:bg-gray-950 transition border border-slate-900 text-slate-800 hover:text-slate-200 flex items-center justify-center w-14 h-14"
                 >
                   <LeftArrowIcon className="w-8" />
                 </button>
