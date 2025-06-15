@@ -30,8 +30,8 @@ export default function Services() {
   return (
     <section className="container mb-10">
       <div>
-        <div className="w-full text-slate-800 relative lg:ml-64 mt-[450px] lg:mt-0 mx-4 lg:mx-0">
-          <hr className="animated-line absolute left-36 -top-[288px] h-60 lg:border border-gray-100" />
+        <div className="w-full text-slate-900 relative lg:ml-64 mt-[450px] lg:mt-0 mx-4 lg:mx-0">
+          <hr className="animated-line absolute left-36 -top-[288px] h-60 lg:border border-gray-200" />
           <div className="uppercase mt-72">
             <div className="relative">
               <motion.h2
@@ -40,7 +40,7 @@ export default function Services() {
                 viewport={{ once: true }}
                 variants={headingVariants}
                 transition={{ duration: 0.8 }}
-                className="text-xl text-slate-500"
+                className="text-xl text-slate-400"
               >
                 Services
               </motion.h2>
@@ -68,11 +68,11 @@ export default function Services() {
                   Services
                 </motion.span>
               </h2>
-              <hr className="animated-line absolute left-36 top-44 lg:h-[292px] lg:border border-gray-100" />
+              <hr className="animated-line absolute left-36 top-44 lg:h-[293px] lg:border border-gray-100" />
             </div>
           </div>
 
-          <div className="absolute lg:mx-0 lg:w-1/2 lg:left-44 top-[75px] lg:top-48">
+          <div className="absolute lg:mx-0 lg:w-1/2 lg:left-44 top-[76px] lg:top-48">
             <p className="text-gray-500">
               {[
                 "We're a team of strategic digital marketing",
