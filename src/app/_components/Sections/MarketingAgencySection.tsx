@@ -30,9 +30,9 @@ export default function MarketingAgencySection() {
     const mainTl = gsap.timeline({
       scrollTrigger: {
         trigger: section,
-        start: "30% center", // Trigger when section is 30% visible
+        start: "30% center",
         end: "50% center",
-        scrub: 1, // Smooth scrolling
+        scrub: 1, 
         toggleActions: "play none none reverse",
         markers: false,
       },
@@ -67,7 +67,7 @@ export default function MarketingAgencySection() {
     const fadeTl = gsap.timeline({
       scrollTrigger: {
         trigger: section,
-        start: "60% center", // Start fade out near the end
+        start: "60% center", 
         end: "80% center",
         scrub: 1, // Smooth scrolling
         toggleActions: "play none none reverse",
@@ -125,8 +125,8 @@ export default function MarketingAgencySection() {
         </div>
 
         {/* Content Section */}
-        <div className="text-slate-200 relative">
-          <hr className="animated-line absolute left-36 -top-[272px] h-64 lg:border border-gray-900" />
+        <div className="text-slate-300 relative">
+          <hr className="animated-line absolute left-36 -top-[272px] h-64 lg:border border-gray-800" />
           <div className="uppercase lg:w-4/5 mt-16">
             <div className="relative z-10">
               <motion.h2
@@ -172,12 +172,12 @@ export default function MarketingAgencySection() {
                   agency.
                 </motion.span>
               </h2>
-              <hr className="animated-line absolute left-36 top-52 lg:h-[692px] lg:border border-gray-900" />
+              <hr className="animated-line absolute left-36 top-52 lg:h-[692px] lg:border border-gray-950" />
             </div>
           </div>
           {/* bg black not found */}
           <div className="absolute lg:mx-0 w-full lg:w-2/3 lg:right-10 top-[410px] lg:top-64">
-            <p className="text-gray-500">
+            <p className="text-gray-300">
               {[
                 "We're a team of strategic digital marketing",
                 "working globally with largest brands. We believe",
@@ -201,7 +201,7 @@ export default function MarketingAgencySection() {
             </p>
             <div className="mt-6 lg:mt-20">
               <Button
-                title={"Explore Ue"}
+                title={"Explore Us"}
                 hoverBackgroundColor="white"
                 hoverTextColor="black"
               />
