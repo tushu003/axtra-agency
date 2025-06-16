@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function ChooseUsInformation() {
   return (
-    <section className="container w-full bg-[#f6f6f5] py-10">
-      <div className="lg:flex">
+    <section className="container w-full h-screen bg-[#f6f6f5] flex items-center justify-center py-10">
+      <div className="lg:flex w-full">
         <div className="lg:w-1/2 px-10">
           <p className="uppercase text-xl font-medium">
             Why <br /> Choose Us
