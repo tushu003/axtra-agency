@@ -1,13 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion"; // Importing framer-motion
+import { motion, Variants } from "framer-motion"; // Importing framer-motion
 import Image from "next/image";
 import banner from "../../../../public/axtra/banner.jpg";
 import DownArrowIcon from "../Icons/down-arrow";
 import { useState } from "react";
 
 // Variants for Animation
-const textVariants = {
+const textVariants: Variants = {
   hidden: { opacity: 0, x: 50 },
   visible: (i: number) => ({
     opacity: 1,
@@ -15,12 +15,12 @@ const textVariants = {
     transition: {
       delay: i * 0.3,
       duration: 0.5,
-      ease: "easeInOut",
+      ease: "easeInOut" as const,
     },
   }),
 };
 
-const paragraphVariants = {
+const paragraphVariants: Variants = {
   hidden: { opacity: 0, x: 50 },
   visible: (i: number) => ({
     opacity: 1,
@@ -28,21 +28,21 @@ const paragraphVariants = {
     transition: {
       delay: i * 0.3 + 2,
       duration: 0.5,
-      ease: "easeInOut",
+      ease: "easeInOut" as const,
     },
   }),
 };
 
 // Down Arrow Animation Variants
-const arrowVariants = {
+const arrowVariants: Variants = {
   move: {
     y: [0, 70, 0],
     transition: {
       y: {
         repeat: Infinity,
-        repeatType: "loop",
+        repeatType: "loop" as const,
         duration: 8,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       },
     },
   },

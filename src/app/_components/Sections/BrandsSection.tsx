@@ -1,33 +1,40 @@
-'use client';
+"use client";
 
-import React, { useEffect, useState, useRef } from 'react';
-import brand01 from '../../../../public/axtra/b1.png';
-import brand02 from '../../../../public/axtra/b2.png';
-import brand03 from '../../../../public/axtra/b3.png';
-import brand04 from '../../../../public/axtra/b4.png';
-import brand05 from '../../../../public/axtra/b5.png';
-import brand06 from '../../../../public/axtra/b6.png';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState, useRef } from "react";
+import brand01 from "../../../../public/axtra/b1.png";
+import brand02 from "../../../../public/axtra/b2.png";
+import brand03 from "../../../../public/axtra/b3.png";
+import brand04 from "../../../../public/axtra/b4.png";
+import brand05 from "../../../../public/axtra/b5.png";
+import brand06 from "../../../../public/axtra/b6.png";
+import Image from "next/image";
+import { motion, Variants } from "framer-motion";
 
 // Animation Variants
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.9,
-      ease: 'easeInOut',
-      when: 'beforeChildren',
+      ease: "easeInOut",
+      when: "beforeChildren",
       staggerChildren: 0.3, // Staggering children animation
     },
   },
 };
 
-const childVariants = {
+const childVariants: Variants = {
   hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.9, ease: 'easeInOut' } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.9,
+      ease: "easeInOut" as const,
+    },
+  },
 };
 
 export default function BrandsSection() {
@@ -43,7 +50,7 @@ export default function BrandsSection() {
           setIsInView(true);
         }
       },
-      { threshold: 0.5 } 
+      { threshold: 0.5 }
     );
 
     if (section) {
@@ -52,7 +59,7 @@ export default function BrandsSection() {
 
     return () => {
       if (section) {
-        observer.unobserve(section); 
+        observer.unobserve(section);
       }
     };
   }, []);
@@ -63,7 +70,7 @@ export default function BrandsSection() {
       <motion.h2
         className="uppercase text-2xl text-slate-800 mx-10 lg:mx-0"
         initial="hidden"
-        animate={isInView ? 'visible' : 'hidden'}
+        animate={isInView ? "visible" : "hidden"}
         variants={childVariants}
       >
         We worked with global largest brands
@@ -73,7 +80,7 @@ export default function BrandsSection() {
       <motion.div
         className="flex items-center justify-center flex-wrap gap-20 mt-10"
         initial="hidden"
-        animate={isInView ? 'visible' : 'hidden'}
+        animate={isInView ? "visible" : "hidden"}
         variants={containerVariants}
       >
         {/* Each Image with Animation */}
