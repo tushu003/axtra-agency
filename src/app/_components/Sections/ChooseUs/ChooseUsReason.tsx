@@ -3,16 +3,17 @@ import choose from "../../../../../public/axtra/coose-01.png";
 
 export default function ChooseUsReason() {
   return (
-    <section className="container w-full h-full bg-[#F3ECEC] py-10">
-      <div className="lg:flex">
-      <div
-          className="w-1/2 px-10 lg:bg-[url('/axtra/coose-01.png')] lg:bg-[length:110px] lg:bg-[position:left_20px_bottom_140px] lg:bg-no-repeat"
+    <section className="container w-full h-screen bg-[#F3ECEC] py-40 flex items-center justify-center">
+      <div className="lg:flex w-full">
+        {/* Left Side */}
+        <div
+          className="w-full lg:w-1/2 px-10 lg:bg-[url('/axtra/coose-01.png')] lg:bg-[length:110px] lg:bg-[position:left_20px_bottom_140px] lg:bg-no-repeat"
         >
           <p className="uppercase text-xl font-medium">
             Why <br /> Choose Us
           </p>
           <h2 className="uppercase font-medium text-5xl text-slate-800 mt-8">
-            Keword,Research Strategy, Survey, & Analytics
+            Keyword, Research Strategy, Survey, & Analytics
           </h2>
           <p className="mt-6 lg:mt-14 w-96 lg:ml-36 text-slate-600">
             Attention, we take out our round glasses and our sweater with elbow
@@ -31,11 +32,14 @@ export default function ChooseUsReason() {
             </button>
           </div>
         </div>
-        <div className="lg:w-1/2">
-          <div className="">
+        
+        {/* Right Side */}
+        <div className="lg:w-1/2 flex items-center justify-center">
+          <div>
+            {/* Strategy Section */}
             <div className="flex gap-2 md:gap-6 ml-14 md:ml-20 mt-10 md:mt-0">
-              <div className=" ">
-                <p className="text-4xl md:text-5xl text-gray-800 border-4 border-gray-900 inline-block p-5 md:p-9 py-8 md:py-14 rounded-full">
+              <div>
+                <p className="text-4xl md:text-5xl text-gray-800 border-4 border-gray-800 inline-block p-5 md:p-9 py-8 md:py-14 rounded-full">
                   60%
                 </p>
               </div>
@@ -48,14 +52,15 @@ export default function ChooseUsReason() {
               </div>
             </div>
 
+            {/* Audience Section */}
             <div className="flex gap-6 ml-14 md:ml-0 my-8">
-              <div className=" ">
-              <p className="text-4xl md:text-5xl text-gray-900 border-4 border-gray-900 inline-block p-5 md:p-9 py-8 md:py-14 rounded-full">
+              <div>
+                <p className="text-4xl md:text-5xl text-gray-900 border-4 border-gray-800 inline-block p-5 md:p-9 py-8 md:py-14 rounded-full">
                   90%
                 </p>
               </div>
               <div>
-                <h2 className="text-3xl font-medium text-gray-900">Audience</h2>
+                <h2 className="text-3xl font-medium text-gray-800">Audience</h2>
                 <p className="md:w-64 text-gray-700 mt-3">
                   Your marketing strategy optimizing performances doesn’t have
                   to be a guessing game.
@@ -63,9 +68,10 @@ export default function ChooseUsReason() {
               </div>
             </div>
 
+            {/* Keyword Section */}
             <div className="flex gap-6 ml-14 md:ml-20">
-              <div className=" ">
-              <p className="text-4xl md:text-5xl text-gray-800 border-4 border-gray-800 inline-block p-5 md:p-9 py-8 md:py-14 rounded-full">
+              <div>
+                <p className="text-4xl md:text-5xl text-gray-800 border-4 border-gray-800 inline-block p-5 md:p-9 py-8 md:py-14 rounded-full">
                   70%
                 </p>
               </div>

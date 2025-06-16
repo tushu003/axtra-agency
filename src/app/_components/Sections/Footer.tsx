@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import footerImg from "../../../../public/axtra/logo.png";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
@@ -11,12 +12,12 @@ const Footer = () => {
         {/* Left Section */}
         <div className="w-full lg:w-1/4 p-4 lg:p-8">
           <div className="mb-8 lg:mb-12">
-            <Image 
-              src={footerImg} 
-              width={100} 
-              height={100} 
+            <Image
+              src={footerImg}
+              width={100}
+              height={100}
               alt="Axtra"
-              className="mx-auto lg:mx-0" 
+              className="mx-auto lg:mx-0"
             />
             <p className="mt-4 text-gray-400 text-sm text-center lg:text-left">
               When do they work well, and when do they on us and finally, when
@@ -46,7 +47,7 @@ const Footer = () => {
             >
               Linkedin
             </Link>
-            <Link 
+            <Link
               href="#"
               className="flex-1 lg:flex-none text-center p-3 lg:p-4 hover:bg-gray-800 transition-colors py-4 lg:py-7"
             >
@@ -58,7 +59,23 @@ const Footer = () => {
         {/* Right Content */}
         <div className="flex-1 p-4 lg:p-8 relative">
           <div className="flex items-center justify-center h-full py-8 lg:py-0">
-            <h1 className="text-4xl md:text-6xl lg:text-9xl font-semibold text-center whitespace-nowrap">
+            <h1
+              className="text-4xl md:text-6xl lg:text-9xl font-semibold text-center whitespace-nowrap"
+              animate={{
+                color: [
+                  "#33fff6 ",
+                  "#336bff ",
+                  "#f633ff ",
+                  "#ff337a ",
+                  "#ff3333 ",
+                ],
+                transition: {
+                  delay: 0.5,
+                  repeat: Infinity,
+                  duration: 4,
+                },
+              }}
+            >
               <span className="text-yellow-400">LET</span>
               <span className="text-orange-500">'S </span>
               <span className="text-red-500">T</span>

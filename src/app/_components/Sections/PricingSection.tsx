@@ -75,7 +75,7 @@ export default function PricingSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="container bg-[#F3ECEC] py-64">
+    <section ref={sectionRef} className=" bg-[#F3ECEC] py-64 px-32">
       <div className="lg:flex w-full">
         <div ref={textRef} className="lg:w-1/2 mx-5">
           <p className="uppercase text-xl text-gray-600">Pricing Table</p>

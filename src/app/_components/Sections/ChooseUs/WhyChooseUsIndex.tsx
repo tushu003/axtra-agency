@@ -67,7 +67,7 @@ const WhyChooseUsIndex: FC = () => {
               ref={(el) => {
                 sectionsRef.current[index] = el;
               }}
-              className="absolute w-full" // Each section has full screen height
+              className="absolute w-full " // Each section has full screen height
             >
               <Component />
             </div>
