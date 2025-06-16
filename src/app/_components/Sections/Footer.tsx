@@ -1,10 +1,62 @@
+"use client";
+
 import React from "react";
-import Link from "next/link";
-import footerImg from "../../../../public/axtra/logo.png";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import Image from "next/image";
+// import footerImg from "@/public/axtra/logo.png";
 
 const Footer = () => {
+  const text = "LET'S TALK";
+  const letters = text.split("");
+
+  // Colors for each letter (matching your original colors)
+  const letterColors = [
+    "#fbbf24", // yellow-400 for L
+    "#f97316", // orange-500 for E
+    "#ef4444", // red-500 for T
+    "#ec4899", // pink-500 for '
+    "#a855f7", // purple-500 for S
+    "#ffffff", // white for space
+    "#06b6d4", // cyan-500 for T
+    "#ec4899", // pink-500 for A
+    "#a855f7", // purple-500 for L
+    "#8b5cf6", // violet-500 for K
+  ];
+
+  // Container animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  // Letter animation variants
+  const letterVariants = {
+    hidden: {
+      opacity: 0,
+      y: 100,
+      scale: 0.5,
+      rotateY: -90,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      rotateY: 0,
+      transition: {
+        type: "spring" as const,
+        damping: 8,
+        stiffness: 100,
+        duration: 1.2,
+      },
+    },
+  };
+
   return (
     <div className="bg-gray-900 text-white">
       {/* Main Layout */}
@@ -13,7 +65,7 @@ const Footer = () => {
         <div className="w-full lg:w-1/4 p-4 lg:p-8">
           <div className="mb-8 lg:mb-12">
             <Image
-              src={footerImg}
+              src="/axtra/logo.png"
               width={100}
               height={100}
               alt="Axtra"
@@ -29,60 +81,69 @@ const Footer = () => {
         {/* Social Media Sidebar */}
         <div className="w-full lg:w-32 border-t lg:border-t-0 border-l-0 lg:border-l border-r-0 lg:border-r border-b border-gray-800">
           <div className="flex lg:flex-col justify-center lg:justify-start h-full">
-            <Link
+            <a
               href="#"
               className="flex-1 lg:flex-none text-center p-3 lg:p-4 border-r lg:border-r-0 border-b-0 lg:border-b border-gray-800 hover:bg-gray-800 transition-colors py-4 lg:py-7"
             >
               Facebook
-            </Link>
-            <Link
+            </a>
+            <a
               href="#"
               className="flex-1 lg:flex-none text-center p-3 lg:p-4 border-r lg:border-r-0 border-b-0 lg:border-b border-gray-800 hover:bg-gray-800 transition-colors py-4 lg:py-7"
             >
               Twitter
-            </Link>
-            <Link
+            </a>
+            <a
               href="#"
               className="flex-1 lg:flex-none text-center p-3 lg:p-4 border-r lg:border-r-0 border-b-0 lg:border-b border-gray-800 hover:bg-gray-800 transition-colors py-4 lg:py-7"
             >
               Linkedin
-            </Link>
-            <Link
+            </a>
+            <a
               href="#"
               className="flex-1 lg:flex-none text-center p-3 lg:p-4 hover:bg-gray-800 transition-colors py-4 lg:py-7"
             >
               Instagram
-            </Link>
+            </a>
           </div>
         </div>
 
-        {/* Right Content */}
         <div className="flex-1 p-4 lg:p-8 relative">
           <div className="flex items-center justify-center h-full py-8 lg:py-0">
-            <h1
+            <motion.h1
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
               className="text-4xl md:text-6xl lg:text-9xl font-semibold text-center whitespace-nowrap"
-              animate={{
-                color: [
-                  "#33fff6 ",
-                  "#336bff ",
-                  "#f633ff ",
-                  "#ff337a ",
-                  "#ff3333 ",
-                ],
-                transition: {
-                  delay: 0.5,
-                  repeat: Infinity,
-                  duration: 4,
-                },
-              }}
             >
-              <span className="text-yellow-400">LET</span>
-              <span className="text-orange-500">'S </span>
-              <span className="text-red-500">T</span>
-              <span className="text-pink-500">A</span>
-              <span className="text-purple-500">L</span>
-              <span className="text-violet-500">K</span>
-            </h1>
+              {letters.map((letter, index) => (
+                <motion.span
+                  key={index}
+                  variants={letterVariants}
+                  style={{
+                    color: letterColors[index],
+                    display: "inline-block",
+                    transformOrigin: "center center",
+                  }}
+                  animate={{
+                    y: [0, -30, 0],
+                    scale: [1, 1.15, 1],
+                    rotateZ: [0, 3, -3, 0],
+                  }}
+                  transition={{
+                    delay: index * 0.08,
+                    duration: 0.6,
+                    ease: "easeInOut",
+                    repeat: Infinity,
+                    repeatDelay: 3 - 0.6,
+                    repeatType: "loop",
+                  }}
+                  className="cursor-pointer"
+                >
+                  {letter === " " ? "\u00A0" : letter}
+                </motion.span>
+              ))}
+            </motion.h1>
           </div>
         </div>
       </div>
@@ -94,18 +155,18 @@ const Footer = () => {
             © 2022 - 2025 | Alrights reserved by Wealcoder
           </div>
           <div className="flex flex-wrap justify-center lg:justify-end gap-4 lg:gap-8">
-            <Link href="/about" className="text-gray-400 hover:text-white">
+            <a href="/about" className="text-gray-400 hover:text-white">
               ABOUT US
-            </Link>
-            <Link href="/contact" className="text-gray-400 hover:text-white">
+            </a>
+            <a href="/contact" className="text-gray-400 hover:text-white">
               CONTACT
-            </Link>
-            <Link href="/career" className="text-gray-400 hover:text-white">
+            </a>
+            <a href="/career" className="text-gray-400 hover:text-white">
               CAREER
-            </Link>
-            <Link href="/faqs" className="text-gray-400 hover:text-white">
+            </a>
+            <a href="/faqs" className="text-gray-400 hover:text-white">
               FAQS
-            </Link>
+            </a>
           </div>
         </div>
       </footer>
