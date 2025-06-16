@@ -3,7 +3,7 @@ import choose from "../../../../../public/axtra/coose-01.png";
 
 export default function ChooseUsReason() {
   return (
-    <section className="container w-full bg-[#F3ECEC] py-10">
+    <section className="container w-full h-full bg-[#F3ECEC] py-10">
       <div className="lg:flex">
       <div
           className="w-1/2 px-10 lg:bg-[url('/axtra/coose-01.png')] lg:bg-[length:110px] lg:bg-[position:left_20px_bottom_140px] lg:bg-no-repeat"
@@ -11,7 +11,7 @@ export default function ChooseUsReason() {
           <p className="uppercase text-xl font-medium">
             Why <br /> Choose Us
           </p>
-          <h2 className="uppercase font-medium text-5xl text-slate-900 mt-8">
+          <h2 className="uppercase font-medium text-5xl text-slate-800 mt-8">
             Keword,Research Strategy, Survey, & Analytics
           </h2>
           <p className="mt-6 lg:mt-14 w-96 lg:ml-36 text-slate-600">
@@ -35,7 +35,7 @@ export default function ChooseUsReason() {
           <div className="">
             <div className="flex gap-2 md:gap-6 ml-14 md:ml-20 mt-10 md:mt-0">
               <div className=" ">
-                <p className="text-4xl md:text-5xl text-gray-900 border-4 border-gray-900 inline-block p-5 md:p-9 py-8 md:py-14 rounded-full">
+                <p className="text-4xl md:text-5xl text-gray-800 border-4 border-gray-900 inline-block p-5 md:p-9 py-8 md:py-14 rounded-full">
                   60%
                 </p>
               </div>
@@ -65,12 +65,12 @@ export default function ChooseUsReason() {
 
             <div className="flex gap-6 ml-14 md:ml-20">
               <div className=" ">
-              <p className="text-4xl md:text-5xl text-gray-900 border-4 border-gray-900 inline-block p-5 md:p-9 py-8 md:py-14 rounded-full">
+              <p className="text-4xl md:text-5xl text-gray-800 border-4 border-gray-800 inline-block p-5 md:p-9 py-8 md:py-14 rounded-full">
                   70%
                 </p>
               </div>
               <div>
-                <h2 className="text-3xl font-medium text-gray-900">Keyword</h2>
+                <h2 className="text-3xl font-medium text-gray-800">Keyword</h2>
                 <p className="w-64 text-gray-700 mt-3">
                   Your marketing strategy optimizing performances doesn’t have
                   to be a guessing game.

@@ -13,25 +13,25 @@ export default function ChooseUsInformation() {
 
           <div className="flex justify-center flex-wrap mt-20">
             <div className="basis-1/2 text-center mb-28">
-              <h2 className="text-7xl font-medium text-gray-900">25K</h2>
+              <h2 className="text-7xl font-medium text-gray-800">25K</h2>
               <p className="text-lg text-gray-600">
                 Project <br /> Completed
               </p>
             </div>
             <div className="basis-1/2 text-center mb-28">
-              <h2 className="text-7xl font-medium text-gray-900">8K</h2>
+              <h2 className="text-7xl font-medium text-gray-800">8K</h2>
               <p className="text-lg text-gray-600">
                 Happy <br /> Customer
               </p>
             </div>
             <div className="basis-1/2 text-center mb-10">
-              <h2 className="text-7xl font-medium text-gray-900">15K</h2>
+              <h2 className="text-7xl font-medium text-gray-800">15K</h2>
               <p className="text-lg text-gray-600">
                 Project <br /> Completed
               </p>
             </div>
             <div className="basis-1/2 text-center mb-10">
-              <h2 className="text-7xl font-medium text-gray-900">98K</h2>
+              <h2 className="text-7xl font-medium text-gray-800">98K</h2>
               <p className="text-lg text-gray-600">
                 Project <br /> Completed
               </p>
